@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:55000/study?currentSchema=entitymanager
+    username: kwondarc
+    password: kwondarc86
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    hibernate:
+      ddl-auto: validate          # 어플리케이션 실행 시, 관련된 테이블 삭제 후 재생성.
+    properties:
+      hibernate:
+#        show_sql: true          # System.out 을 이용한 실행 쿼리 출력
+        format_sql: true        # 쿼리 출력 시 알아보기 좋게 출력
+#        use_sql_comments: true  # 실행된 JPQL 내용도 주석 comment로 볼 수 있도록 설정.
+
+logging.level:
+  org.hibernate.SQL: debug      # 로그를 이용한 실행 쿼리 출력
+  org.hibernate.type: trace     # 실행된 쿼리 파라미터 값 출력
