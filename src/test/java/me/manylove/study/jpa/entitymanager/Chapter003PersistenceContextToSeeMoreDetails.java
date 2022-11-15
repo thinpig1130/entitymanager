@@ -292,6 +292,11 @@ public class Chapter003PersistenceContextToSeeMoreDetails {
         assertThat(em.contains(findMemberOh)).isTrue();
         System.out.println("=== 영속 상태 검사 2 후 ===");
 
+        // 발표중 추가 테스트 구문.
+//        Member merge = em.merge(mergeMemberLee);
+//        assertThat(merge == findMemberOh).isTrue();
+
+
         /**
          * [ 살펴 볼 내용 ]
          * 1. merge 후에 반환된 객체는 merge 된 내용을 반영하고 있다.
